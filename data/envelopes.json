@@ -1,12 +1,22 @@
 [
   {
     "id": 1,
-    "name": "Car",
-    "amount": 20000
+    "envelope": "Party",
+    "amount": 500
   },
   {
     "id": 2,
-    "name": "Laptop",
+    "envelope": "Car",
+    "amount": 1900
+  },
+  {
+    "id": 3,
+    "envelope": "House",
     "amount": 2000
+  },
+  {
+    "id": 4,
+    "envelope": "Shanghai",
+    "amount": 1200
   }
 ]
