@@ -13,10 +13,5 @@
     "id": 3,
     "envelope": "House",
     "amount": 2000
-  },
-  {
-    "id": 4,
-    "envelope": "Shanghai",
-    "amount": 1200
   }
 ]

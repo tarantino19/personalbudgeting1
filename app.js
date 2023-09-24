@@ -122,8 +122,9 @@ app.patch ('/api/v1/transfer/:from/:to', (req, res) => {
     // fromEvelope.amount -> database
     //amount - userinput || req.body
     const updatedToEnvelope = {...toEnvelope, amount: toEnvelope.amount + amount} 
-
+    
     // envelopes = envelopes.map(env => (env.id === idOfFrom ? updatedFromEnvelope : env.id === idOfTo ? updatedToEnvelope : env));
+    //here we're just updating the original envelopes value - there's data mutation here
     envelopes = envelopes.map(env => {
       if (env.id === idOfFrom) {
         return updatedFromEnvelope;
@@ -134,7 +135,7 @@ app.patch ('/api/v1/transfer/:from/:to', (req, res) => {
       }
     });
 
-  
+
   fs.writeFile('./data/envelopes.json', JSON.stringify(envelopes, null, 2), ()=> {
     res.status(200).json ({
       message:"Transfer successful!",
